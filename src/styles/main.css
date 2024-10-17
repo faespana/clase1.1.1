@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  font-size: 1.5rem;
+  padding: 2em;
+  border-radius: 0.8em;
+  background-color: blueviolet;
+  list-style: none;
+  display: grid;
+  gap: 0.5em;
+  color: white;
+}
+
+.list__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+
+.list__label {
+  font-weight: 700;
+}
+
+.list__value {
+  color: #ccc;
+}
