@@ -1,35 +1,33 @@
+import { PersonalInfo } from "./components/PersonalInfo";
 import "./styles/main.css";
 
 function App() {
   const person = {
     name: "Felipe",
     age: 31,
-    favoriteMovie: "Titanic",
+    favoriteMovie: "Blancanieves",
     favoriteMusic: "Rock",
   };
 
-  const { favoriteMusic } = person;
+  const person2 = {
+    name: "Monica",
+    age: 57,
+    favoriteMovie: "Blancanieves",
+    favoriteMusic: "Rock",
+  };
+
+  const person3 = {
+    name: "Angie",
+    age: 21,
+    favoriteMovie: "Best",
+    favoriteMusic: "Baladas",
+  };
 
   return (
     <div className="App">
-      <ul className="list">
-        <li className="list__items">
-          <span className="list__label">Nombre:</span>
-          <span className="list__value">{person.name}</span>
-        </li>
-        <li className="list__items">
-          <span className="list__label">Edad:</span>
-          <span className="list__value">{person["age"]} anios</span>
-        </li>
-        <li className="list__items">
-          <span className="list__label">Pelicula Favorita:</span>
-          <span className="list__value">{person.favoriteMovie}</span>
-        </li>
-        <li className="list__items">
-          <span className="list__label">Musica Favorita:</span>
-          <span className="list__value">{favoriteMusic}</span>
-        </li>
-      </ul>
+      <PersonalInfo persona={person} color="red" />
+      <PersonalInfo persona={person2} color="blue" />
+      <PersonalInfo persona={person3} color="green" />
     </div>
   );
 }
